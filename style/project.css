@@ -66,15 +66,17 @@
 
 }
 #contact{
-	position: fixed;
-  left: 0;
-  bottom: 0;
-  background-color: #CC8800;
-  height: 100px;
+	margin: 50px
   display: inline-flex;
   width: 100%;
   align-items: center;
   justify-content: center;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	background-color: #CC8800;
+	height: 100px;
+
 
 
 }
@@ -93,7 +95,7 @@
 box 1.
 */
 .btn {
-  color: white;
+  color: #CA6F1E;
   font-family: Helvetica;
   font-size: 1.2rem;
   font-weight: 100;
@@ -106,8 +108,14 @@ box 1.
 
 }
 
-#red {
-  background-color: red;
+#green {
+	border: none;
+  background-color: #CA6F1E;
+	width: 100px;
+	height: 100px;
+	display:flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .container {
@@ -118,5 +126,11 @@ box 1.
 }
 
 #blue {
-  background_color: blue;
+	border: none;
+  background-color:#CA6F1E;
+	width: 100px;
+	height: 100px;
+  display: flex;
+	align-items: center;
+	justify-content: center;
 }
