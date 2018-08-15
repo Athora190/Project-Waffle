@@ -15,6 +15,12 @@
 import webapp2
 import jinja2
 import os
+from questions_model import Questions
+from questions import seed_data
+from random import shuffle
+# Import in main.py
+
+
 
 the_jinja_env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -26,8 +32,20 @@ class MainPage(webapp2.RequestHandler):
         welcome_template = the_jinja_env.get_template('templates/project.html')
         self.response.write(welcome_template.render())
 
+class LoadDataHandler(webapp2.RequestHandler):
+    def get(self):
+        seed_data()
+        self.response.write('done with data store')
+
+query_result = Questions.query().fetch(5)
+x = [i for i in query_result]
+shuffle(x)
+
+print x
 
 
 app = webapp2.WSGIApplication([
     ('/', MainPage),
+    ('/seed-data', LoadDataHandler)
+
 ], debug=True)
