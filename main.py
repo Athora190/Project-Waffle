@@ -27,10 +27,29 @@ the_jinja_env = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
+class QuestionHandler(webapp2.RequestHandler):
+    def get(self):
+        #seed_data()
+        query_result = Questions.query().fetch(15)
+        x = [i for i in query_result]
+        shuffle(x)
+        self.response.write(x[0])
+
 class MainPage(webapp2.RequestHandler):
     def get(self):
         welcome_template = the_jinja_env.get_template('templates/project.html')
         self.response.write(welcome_template.render())
+
+class SoloHandler(webapp2.RequestHandler):
+    def get(self):
+        welcome_template = the_jinja_env.get_template('templates/SoloChallenge.html')
+        self.response.write(welcome_template.render())
+
+class MultiHandler(webapp2.RequestHandler):
+    def get(self):
+        welcome_template = the_jinja_env.get_template('templates/Playwithfriends.html')
+        self.response.write(welcome_template.render())
+
 
 class LoadDataHandler(webapp2.RequestHandler):
     def get(self):
@@ -41,11 +60,14 @@ query_result = Questions.query().fetch(5)
 x = [i for i in query_result]
 shuffle(x)
 
-print x
+#print x
 
 
 app = webapp2.WSGIApplication([
     ('/', MainPage),
-    ('/seed-data', LoadDataHandler)
+    ('/seed-data', LoadDataHandler),
+    ('/question', QuestionHandler),
+    ('/solo',SoloHandler),
+    ('/multi',MultiHandler)
 
 ], debug=True)

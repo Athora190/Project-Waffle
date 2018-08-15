@@ -15,8 +15,8 @@
 
 #container {
 
-	display:grid;
-	grid-auto-rows: auto auto;
+	display:flex;
+ /* grid-auto-rows: auto auto; */
 	width: 100%;
 	align-items: center;
 	justify-content: center;
@@ -24,14 +24,17 @@
 }
 
 .item1{
- display:grid;
- grid-template-rows: auto auto;
- grid-row-start:1;
- grid-row-end:2;
+	 margin-top: 16%;
+	 padding: 40px;
+  display:grid;
+  grid-template-columns: auto auto;
+  grid-column-start:1;
+  grid-column-end:2;
 }
 
 .item2{
-
+  margin-top: 16%;
+		 padding: 40px;
 }
 #image1{
 

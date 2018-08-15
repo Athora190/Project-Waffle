@@ -10,13 +10,13 @@ redButton.addEventListener('click', (e) => {
 
 let blueButton = document.querySelector('#blue');
 blueButton.addEventListener('click', (e) => {
-    window.location.href = 'Playwithfriends.html'
+    window.location.href = '/multi'
 });
 
 // greenButton
 let greenButton = document.querySelector('#green');
 greenButton = document.querySelector('click', (e) => {
-    
+      window.location.href = '/solo'
 });
 
 
