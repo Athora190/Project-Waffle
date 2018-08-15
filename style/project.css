@@ -12,6 +12,27 @@
 	align-items: center;
 	justify-content: center;
 }
+
+#container {
+
+	display:grid;
+	grid-auto-rows: auto auto;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.item1{
+ display:grid;
+ grid-template-rows: auto auto;
+ grid-row-start:1;
+ grid-row-end:2;
+}
+
+.item2{
+
+}
 #image1{
 
 	display: flex;
@@ -66,16 +87,17 @@
 
 }
 #contact{
-	margin: 50px
-  display: inline-flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
+
 	position: fixed;
 	left: 0;
 	bottom: 0;
 	background-color: #CC8800;
 	height: 100px;
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
 
 
 
@@ -117,13 +139,13 @@ box 1.
 	align-items: center;
 	justify-content: center;
 }
-
-.container {
-  display: grid;
-  grid-gap: 25px;
-  grid-template-columns: 100px 300px;
-  margin: 25px;
+.div_button{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
 }
+
 
 #blue {
 	border: none;
