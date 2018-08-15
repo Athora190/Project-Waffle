@@ -6,25 +6,28 @@ redButton.addEventListener('click', (e) => {
     document.getElementById("").innerHTML ="red"
 }
 
-#blue buttonn
+//blue buttonn
 
 let blueButton = document.querySelector('#blue');
 blueButton.addEventListener('click', (e) => {
 
 }
-#greenButton
+//greenButton
 let greenButton = document.querySelector('#green');
 greenButton = document.querySelector('click', (e) => {
 
 }
-</script>
-// new code for button
-<<<<<<< HEAD
-id= demo
-<button onclick="myFunction()"</button>
+let yellowButton = document.querySelector('#yellow');
+yellowButton = document.querySelector('click', (e) => {
+
+}
 
 
-  <element onclick="myScript">
+//id= demo
+//<button onclick="myFunction()"</button>
+
+
+  //<element onclick="myScript">
 
 
 
@@ -54,15 +57,4 @@ id= demo
 //c. It got cut off because he disrespected his father.
 //d. It broke off of his leg.
 
-//5. 
-=======
-id= demo                                     
-<button onclick="myFunction()">Click me</button>
-
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Hello World";
-}                                     
-
-  <element onclick="myScript">  
-  
->>>>>>> f43fef99840d8c6c8f96c3e021c1de73a4d2f76d
+//5.

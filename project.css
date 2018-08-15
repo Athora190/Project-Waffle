@@ -39,13 +39,13 @@
 /*
 box 1.
 */
-.btn {
+.red {
   color: white;
   font-family: Helvetica;
   font-size: 1.2rem;
   font-weight: 100;
-  height: 100px;
-  width: 100px;
+  height: 1000px;
+  width: 1000px;
 }
 
 #red {
@@ -103,6 +103,5 @@ body {
 
 }
 #code{
-	
+
 }
->>>>>>> 8c1f1e4f82079e274adda77a60bb8fa196754299
