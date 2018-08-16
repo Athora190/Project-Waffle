@@ -198,15 +198,15 @@ def seed_data():
                         choice2 ="Restore honor to her family's name.",
                         choice3 ="To fall in love with a soldier.",
                         choice4 ="To run away from her family.",
-                        correct_answer ="she wanted to prove that she can fight like a man.",
+                        correct_answer ="Restore honor to her family's name.",
                         ).put()
 
     z_key = Questions(question="How did Hiccup lose a leg?",
                         choice1 ="He was born without one",
-                        choice2 ="He lost by trying to save toothless.",
+                        choice2 ="He lost it by trying to save toothless.",
                         choice3 ="It got cut off because he disrespected his father.",
                         choice4 ="It broke off of his leg",
-                        correct_answer ="He lost by trying to save toothless.",
+                        correct_answer ="He lost it by trying to save toothless.",
                         ).put()
 
     ab_key = Questions(question="What is the biggest plant in our solor system?",
@@ -238,5 +238,5 @@ def seed_data():
                         choice2 ="He didn't kill Koda's mom.",
                         choice3 ="She killed Denahi",
                         choice4 ="Kenai killed her by accident.",
-                        correct_answer ="Kenai killed her by accident",
+                        correct_answer ="She killed Denahi",
                         ).put()
