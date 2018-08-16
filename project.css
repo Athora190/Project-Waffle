@@ -1,10 +1,9 @@
-<<<<<<< HEAD
+
 #head {
 
 	margin:auto;
 	height: 100px;
   width: 100%;
-	background-color: #FE9C11;
 	color: #FBF8F4;
 	display: inline-flex;
 	width: 100%
@@ -23,6 +22,13 @@
 
 }
 #contact{
+  background-color: #CC8800;
+  height: 100px;
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
 
 }
 
@@ -62,6 +68,7 @@ box 1.
 #blue {
   background_color: blue;
 }
+<<<<<<< HEAD
 /*
 body {
   display: flex;
@@ -105,3 +112,5 @@ body {
 #code{
 
 }
+=======
+>>>>>>> be0e5a13b339b1ac11b477079ef0f0b6c0fcee34
