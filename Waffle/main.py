@@ -129,18 +129,21 @@ class MultiHandler(webapp2.RequestHandler):
         welcome_template = the_jinja_env.get_template('templates/Playwithfriends.html')
         self.response.write(welcome_template.render())
 
+class MultiGameHandler(webapp2.RequestHandler):
+    def get(self):
+        welcome_template = the_jinja_env.get_template('templates/Triviagame.html')
+        self.response.write(welcome_template.render())
 
 class LoadDataHandler(webapp2.RequestHandler):
     def get(self):
         seed_data()
         self.response.write('done with data store')
 
-<<<<<<< HEAD
+
 #query_result = Questions.query().fetch(5)
 #x = [i for i in query_result]
 #shuffle(x)
-=======
->>>>>>> 2fe0c6165eeb353fb50adb9c3043d7b5cce407d1
+
 
 #print x
 
@@ -151,6 +154,7 @@ app = webapp2.WSGIApplication([
     ('/solo',SoloHandler),
     ('/multi',MultiHandler),
     ('/score',ScoreHandler),
-    ('/game',MainHandler)
+    ('/game',MainHandler),
+    ('/multigame', MultiGameHandler)
 
 ], debug=True)
