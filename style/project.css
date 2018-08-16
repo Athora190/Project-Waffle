@@ -79,12 +79,12 @@
   display: flex;
 	align-items: center;
 	justify-content: center;
-	color:#E0BF52
+	color:#33210C
 
 }
 
 .Playwithfriends{
-	color:#8C5634
+	color:#33210C;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -104,6 +104,13 @@
 
 
 
+
+}
+
+h3 {
+  display:flex;
+  align-items: center;
+  justify-content: center;
 
 }
 

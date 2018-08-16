@@ -70,9 +70,6 @@ class LoadDataHandler(webapp2.RequestHandler):
         seed_data()
         self.response.write('done with data store')
 
-query_result = Questions.query().fetch(5)
-x = [i for i in query_result]
-shuffle(x)
 
 #print x
 
