@@ -1,0 +1,179 @@
+
+#head {
+  margin:auto;
+	height: 100px;
+  width: 100%;
+	color: #FBF8F4;
+	display: inline-flex;
+	width: 100%
+	height: 100px;
+	background-color: #FE9C11;
+	color: #FBF8F4;
+	align-items: center;
+	justify-content: center;
+}
+
+#container {
+
+	display:flex;
+ /* grid-auto-rows: auto auto; */
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+
+}
+input[type = submit]{
+  border: none;
+   color: white;
+   padding: 15px 32px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+}
+
+.item1{
+	 margin-top: 16%;
+	 padding: 40px;
+  display:grid;
+  grid-template-columns: auto auto;
+  grid-column-start:1;
+  grid-column-end:2;
+}
+
+.item2{
+  margin-top: 16%;
+		 padding: 40px;
+}
+#image1{
+
+	display: flex;
+
+	align-items: center;
+	justify-content: center;
+
+
+}
+#image2{
+
+	display: flex;
+
+	align-items: center;
+	justify-content: center;
+
+
+}
+#img1{
+  height: 200px;
+	display: flex;
+	width: 200px;
+	align-items: center;
+	justify-content: center;
+
+
+
+}
+
+#img2{
+  height: 200px;
+	display: flex;
+	width: 200px;
+  align-items: center;
+	justify-content: center;
+
+
+
+}
+.solo-challenge{
+  display: flex;
+	align-items: center;
+	justify-content: center;
+	color:#540D12;
+
+}
+
+.Playwithfriends{
+	color:#540D12;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+#contact{
+
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	background-color: #CC8800;
+	height: 100px;
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+
+
+
+}
+
+h3 {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  color:#540D12;
+
+}
+
+#join{
+
+}
+#friends{
+
+}
+#code{
+
+}
+
+/*
+box 1.
+*/
+.btn {
+  color: #CA6F1E;
+  font-family: Helvetica;
+  font-size: 1.2rem;
+  font-weight: 100;
+  height: 100px;
+  width: 100px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+
+}
+
+#green {
+	border: none;
+  background-color: #CA6F1E;
+	width: 100px;
+	height: 100px;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+.div_button{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+}
+
+
+#blue {
+	border: none;
+  background-color:#CA6F1E;
+	width: 100px;
+	height: 100px;
+  display: flex;
+	align-items: center;
+	justify-content: center;
+}

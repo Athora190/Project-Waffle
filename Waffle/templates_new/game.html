@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game Board</title>
+        <link type="text/css" href="css/style/project.css" />
+        <style>
+        input[type = submit]{
+          border: none;
+           color: white;
+           padding: 15px 32px;
+           margin: 10px;
+           text-decoration: none;
+           display: inline-block;
+           width: 50%;
+           font-size: 16px;
+           overflow: visible;
+        }
+
+        </style>
+    </head>
+    <body>
+        <div align="center">
+            <h2>{{question}}</h2>
+        </div>
+        <ul>
+          <li>{{choice1}}</li>
+          <li>{{choice2}}</li>
+          <li>{{choice3}}</li>
+          <li>{{choice4}}</li>
+        </ul>
+
+        <div align="center">
+            <form method="post" action="/score">
+                <input type="submit" name="choice1" value="{{choice1}}">
+                <input type="submit" name="choice2" value="{{choice2}}"> <br/>
+                <input type="submit" name="choice3" value="{{choice3}}">
+                <input type="submit" name="choice4" value="{{choice4}}">
+            </form>
+        </div>
+    </body>
+</html>
