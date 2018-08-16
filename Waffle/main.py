@@ -129,6 +129,11 @@ class MultiHandler(webapp2.RequestHandler):
         welcome_template = the_jinja_env.get_template('templates/Playwithfriends.html')
         self.response.write(welcome_template.render())
 
+class HowtoHandler(webapp2.RequestHandler):
+    def get(self):
+        welcome_template = the_jinja_env.get_template('templates/how-to-play.html')
+        self.response.write(welcome_template.render())
+
 class MultiGameHandler(webapp2.RequestHandler):
     def get(self):
         welcome_template = the_jinja_env.get_template('templates/Triviagame.html')
@@ -155,6 +160,7 @@ app = webapp2.WSGIApplication([
     ('/multi',MultiHandler),
     ('/score',ScoreHandler),
     ('/game',MainHandler),
-    ('/multigame', MultiGameHandler)
+    ('/multigame', MultiGameHandler),
+    ('/how-to-play',HowtoHandler)
 
 ], debug=True)

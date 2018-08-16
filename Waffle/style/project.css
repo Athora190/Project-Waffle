@@ -45,6 +45,9 @@ input[type = submit]{
   margin-top: 16%;
 		 padding: 40px;
 }
+.botn2{
+  margin-left: 19%;
+}
 #image1{
 
 	display: flex;
