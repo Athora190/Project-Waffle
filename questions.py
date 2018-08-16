@@ -18,22 +18,22 @@ def seed_data():
                         ).put()
 
     c_key = Questions(question="What is the regulation height for a basketball hoop?",
-                        choice1 ="8 feet",
-                        choice2 ="12 feet",
-                        choice3 ="5 feet",
-                        choice4 ="10 feet",
-                        correct_answer ="10 feet",
+                        choice1 ="8 Feet",
+                        choice2 ="12 Feet",
+                        choice3 ="5 Feet",
+                        choice4 ="10 Feet",
+                        correct_answer ="10 Feet",
                         ).put()
 
-    d_key = Questions(question="How many stars are in the sky?",
+    d_key = Questions(question="How many stars are there in the sky?",
                         choice1 ="5 billion",
                         choice2 ="3 thousand",
                         choice3 ="10 billion",
-                        choice4 ="there are too many to count",
-                        correct_answer ="there are too many to count",
+                        choice4 ="There are too many to count.",
+                        correct_answer ="There are too many to count.",
                         ).put()
 
-    e_key = Questions(question="How many types of stars are there?",
+    e_key = Questions(question="How many different types of stars are there?",
                         choice1 ="3",
                         choice2 ="5",
                         choice3 ="12",
@@ -41,7 +41,7 @@ def seed_data():
                         correct_answer ="5",
                         ).put()
 
-    f_key = Questions(question="=Who is Simba's father?",
+    f_key = Questions(question="Who is Simba's father?",
                         choice1 ="Mufasa",
                         choice2 ="Scar",
                         choice3 ="Wreak it Ralph",
@@ -59,7 +59,7 @@ def seed_data():
 
     h_key = Questions(question="What NFL Quarterback has been in the most Super Bowls?",
                         choice1 ="Joe Montana",
-                        choice2 ="tom Brady",
+                        choice2 ="Tom Brady",
                         choice3 ="Eli Manning",
                         choice4 ="Peyton Manning",
                         correct_answer ="Tom Brady",
@@ -97,7 +97,7 @@ def seed_data():
                         correct_answer ="4",
                         ).put()
 
-    m_key = Questions(question=" Which is the least popular sport in the World?",
+    m_key = Questions(question="Which is the least popular sport in the World?",
                         choice1 ="Soccer",
                         choice2 ="Cricket",
                         choice3 ="Volleyball",
@@ -190,7 +190,7 @@ def seed_data():
                         choice2 ="she never had a glass slipper.",
                         choice3 ="she ran and it fell off her foot.",
                         choice4 ="Someone stole it.",
-                        correct_answer ="she ran and it fell off her foot",
+                        correct_answer ="she ran and it fell off her foot.",
                         ).put()
 
     y_key = Questions(question="Why did Mulan join the military?",
@@ -198,15 +198,23 @@ def seed_data():
                         choice2 ="Restore honor to her family's name.",
                         choice3 ="To fall in love with a soldier.",
                         choice4 ="To run away from her family.",
-                        correct_answer ="she wanted to prove that she can fight like a man.",
+                        correct_answer ="Restore honor to her family's name.",
                         ).put()
 
     z_key = Questions(question="How did Hiccup lose a leg?",
-                        choice1 ="He was born without one",
+<<<<<<< HEAD
+                        choice1 ="He was born without one.",
                         choice2 ="He lost by trying to save toothless.",
                         choice3 ="It got cut off because he disrespected his father.",
-                        choice4 ="It broke off of his leg",
+                        choice4 ="It broke off of his leg.",
                         correct_answer ="He lost by trying to save toothless.",
+=======
+                        choice1 ="He was born without one",
+                        choice2 ="He lost it by trying to save toothless.",
+                        choice3 ="It got cut off because he disrespected his father.",
+                        choice4 ="It broke off of his leg",
+                        correct_answer ="He lost it by trying to save toothless.",
+>>>>>>> 2ff1529b5c0be50697aff240c7c94da40c433698
                         ).put()
 
     ab_key = Questions(question="What is the biggest plant in our solor system?",
@@ -218,25 +226,29 @@ def seed_data():
                         ).put()
 
     cd_key = Questions(question="What happends when a super giant explodes?",
-                        choice1 ="becomes a dead star",
-                        choice2 ="becomes a black hole",
-                        choice3 ="nothing happends",
+                        choice1 ="It becomes a dead star.",
+                        choice2 ="It becomes a black hole.",
+                        choice3 ="Nothing happends.",
                         choice4 ="both a and b",
-                        correct_answer ="both a and b",
+                        correct_answer ="Both A and B.",
                         ).put()
 
-    ef_key = Questions(question="how big is the milky way galaxy in light years?",
+    ef_key = Questions(question="How big is the milky way galaxy in light years?",
                         choice1 ="20,000",
                         choice2 ="100,000",
                         choice3 ="500,000",
-                        choice4 ="no on knows",
+                        choice4 ="Nobody knows.",
                         correct_answer ="100,000",
                         ).put()
 
     gh_key = Questions(question="Why did Kenai kill Koda's mom?",
                         choice1 ="She tried to kill him.",
                         choice2 ="He didn't kill Koda's mom.",
-                        choice3 ="She killed Denahi",
+                        choice3 ="She killed Denahi.",
                         choice4 ="Kenai killed her by accident.",
-                        correct_answer ="Kenai killed her by accident",
+<<<<<<< HEAD
+                        correct_answer ="She killed Denahi.",
+=======
+                        correct_answer ="She killed Denahi",
+>>>>>>> 2ff1529b5c0be50697aff240c7c94da40c433698
                         ).put()

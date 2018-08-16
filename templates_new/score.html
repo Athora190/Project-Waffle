@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Score Board</title>
+        <link type="text/css" href = "css/project.css"
+    </head>
+    <body>
+       <h1>Score Board</h1>
+       <h2>Correct Answer: {{solution}}</h2>
+       <h2>Your Answer: {{choice}}</h2>
+       <ol>
+           {% for item in scores%}
+           <li>{{item}}</li>
+           {% endfor%}
+       </ol>
+     <form method="post" action="/game">
+        <input type="submit" name="next" value="Next >">
+    </form>
+    </body>
+</html>

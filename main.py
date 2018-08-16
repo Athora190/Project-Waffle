@@ -18,6 +18,7 @@ import os
 from questions_model import Questions
 from questions import seed_data
 from random import shuffle
+from random import randint
 # Import in main.py
 
 
@@ -26,6 +27,80 @@ the_jinja_env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
+
+question_list = Questions.query().fetch()
+TOTAL = 15 #number of questions to ask
+CURRENT = 0 #index of current question
+question = None
+answers = []
+
+#New Main Page
+class MainHandler(webapp2.RequestHandler):
+    def get(self):
+        global CURRENT
+        global TOTAL
+        global question
+        global question_list
+
+        if CURRENT < TOTAL:
+          CURRENT += 1
+          game_template = the_jinja_env.get_template('templates_new/game.html')
+          question = question_list[randint(0,len(question_list)-1)]
+          question_list.remove(question)
+
+          template_dict = {
+            "question": question.question,
+            "choice1": question.choice1,
+            "choice2": question.choice2,
+            "choice3": question.choice3,
+            "choice4": question.choice4
+          }
+
+          self.response.write(game_template.render(template_dict))
+        else:
+          game_template = the_jinja_env.get_template('templates_new/final.html')
+          template_dict = {"total":TOTAL}
+          count = 0
+          CURRENT = 0
+
+          for i in answers:
+            if i == 'correct':
+              count += 1
+
+          template_dict["correct"] = count
+          if count >= 7:
+            template_dict["level"] ="Congratulations you do have what it takes!"
+
+          self.response.write(game_template.render(template_dict))
+    def post(self):
+        self.get()
+
+class ScoreHandler(webapp2.RequestHandler):
+  def post(self):
+    global question
+    global answers
+
+    score_template = the_jinja_env.get_template('templates_new/score.html')
+
+    choices = [self.request.get('choice1'),
+      self.request.get('choice2'),
+      self.request.get('choice3'),
+      self.request.get('choice4')]
+
+    template_dict = {"scores":answers,"solution":question.correct_answer}
+    #if question == None:
+    #    return self.redirect(url_for('/'))
+    for i in choices:
+      if i:
+        template_dict['choice'] = i
+        if i == question.correct_answer:
+          answers.append('correct')
+        else:
+          answers.append('incorrect')
+        break
+
+
+    self.response.write(score_template.render(template_dict))
 
 class QuestionHandler(webapp2.RequestHandler):
     def get(self):
@@ -42,6 +117,8 @@ class MainPage(webapp2.RequestHandler):
 
 class SoloHandler(webapp2.RequestHandler):
     def get(self):
+        self.post()
+    def post(self):
         welcome_template = the_jinja_env.get_template('templates/SoloChallenge.html')
         self.response.write(welcome_template.render())
 
@@ -50,19 +127,14 @@ class MultiHandler(webapp2.RequestHandler):
         welcome_template = the_jinja_env.get_template('templates/Playwithfriends.html')
         self.response.write(welcome_template.render())
 
-class MultiGameHandler(webapp2.RequestHandler):
-    def get(self):
-        welcome_template = the_jinja_env.get_template('templates/Triviagame.html')
-        self.response.write(welcome_template.render())
-
-class SoloGameHandler(webapp2.RequestHandler):
-    def get(self):
-        welcome_template = the_jinja_env.get_template('templates/game.html')
-        self.response.write(welcome_template.render())
-
 class HowtoHandler(webapp2.RequestHandler):
     def get(self):
         welcome_template = the_jinja_env.get_template('templates/how-to-play.html')
+        self.response.write(welcome_template.render())
+
+class MultiGameHandler(webapp2.RequestHandler):
+    def get(self):
+        welcome_template = the_jinja_env.get_template('templates/Triviagame.html')
         self.response.write(welcome_template.render())
 
 class LoadDataHandler(webapp2.RequestHandler):
@@ -71,8 +143,12 @@ class LoadDataHandler(webapp2.RequestHandler):
         self.response.write('done with data store')
 
 
-#print x
+#query_result = Questions.query().fetch(5)
+#x = [i for i in query_result]
+#shuffle(x)
 
+
+#print x
 
 app = webapp2.WSGIApplication([
     ('/', MainPage),
@@ -80,8 +156,9 @@ app = webapp2.WSGIApplication([
     ('/question', QuestionHandler),
     ('/solo',SoloHandler),
     ('/multi',MultiHandler),
-    ('/sologame',SoloGameHandler),
-    ('/multigame',MultiGameHandler),
-    ('/how-to-play',HowtoHandler),
+    ('/score',ScoreHandler),
+    ('/game',MainHandler),
+    ('/multigame', MultiGameHandler),
+    ('/how-to-play',HowtoHandler)
 
 ], debug=True)
