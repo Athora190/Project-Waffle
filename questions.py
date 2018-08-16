@@ -202,19 +202,12 @@ def seed_data():
                         ).put()
 
     z_key = Questions(question="How did Hiccup lose a leg?",
-<<<<<<< HEAD
+
                         choice1 ="He was born without one.",
                         choice2 ="He lost by trying to save toothless.",
                         choice3 ="It got cut off because he disrespected his father.",
                         choice4 ="It broke off of his leg.",
                         correct_answer ="He lost by trying to save toothless.",
-=======
-                        choice1 ="He was born without one",
-                        choice2 ="He lost it by trying to save toothless.",
-                        choice3 ="It got cut off because he disrespected his father.",
-                        choice4 ="It broke off of his leg",
-                        correct_answer ="He lost it by trying to save toothless.",
->>>>>>> 2ff1529b5c0be50697aff240c7c94da40c433698
                         ).put()
 
     ab_key = Questions(question="What is the biggest plant in our solor system?",
@@ -224,7 +217,6 @@ def seed_data():
                         choice4 ="The Sun",
                         correct_answer ="Jupiter",
                         ).put()
-
     cd_key = Questions(question="What happends when a super giant explodes?",
                         choice1 ="It becomes a dead star.",
                         choice2 ="It becomes a black hole.",
@@ -246,9 +238,5 @@ def seed_data():
                         choice2 ="He didn't kill Koda's mom.",
                         choice3 ="She killed Denahi.",
                         choice4 ="Kenai killed her by accident.",
-<<<<<<< HEAD
                         correct_answer ="She killed Denahi.",
-=======
-                        correct_answer ="She killed Denahi",
->>>>>>> 2ff1529b5c0be50697aff240c7c94da40c433698
                         ).put()
