@@ -5,25 +5,81 @@
         <link type="text/css" href = "css/project.css">
     <style>
       body{
+
         background: url('images/357146-dark-road-sunlight-trees-wind_turbine-748x496.jpg');
         background-repeat: no-repeat;
-    		background-size: 100% 450%;
+    		background-size: 100% 250%;
+      }
+      #solution{
+        color:white;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+
+      }
+      ol li{
+
+        color:white;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        font-size:25px;
+
+
+
+      }
+      #botton{
+        margin-top: 75px;
+        box-shadow: 10px 10px;
+        color: black;
+        background-color: #6537EE;
+        border: none;
+        font-family: Helvetica;
+        font-size: 1.6rem;
+        font-weight: 100;
+        height: 50px;
+        width: 300px;
+
+
+
+      }
+      h2{
+
+        color:white;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+
+      }
+      h1{
+        margin-top: 200px;
+        color:white;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+
       }
 
 
     </style>
     </head>
     <body>
+
        <h1>Score Board</h1>
-       <h2>Correct Answer: {{solution}}</h2>
+       <h2 id='solution'>Correct Answer: {{solution}}</h2>
        <h2>Your Answer: {{choice}}</h2>
-       <ol>
+
+       <ol >
            {% for item in scores%}
-           <li>{{item}}</li>
+           <li>{{item}} {{scores[item]}}</li>
+
            {% endfor%}
        </ol>
-     <form method="post" action="/game">
-        <input type="submit" name="next" value="Next >">
+     <center>
+
+     <form  method="post" action="/game">
+        <input id='botton' type="submit" name="next" value="Next >">
     </form>
+</center>
     </body>
 </html>

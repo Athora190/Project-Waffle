@@ -18,7 +18,8 @@ import os
 from questions_model import Questions
 from questions import seed_data
 from random import shuffle
-from random import randint
+import random
+
 # Import in main.py
 
 
@@ -32,7 +33,7 @@ question_list = Questions.query().fetch()
 TOTAL = 15 #number of questions to ask
 CURRENT = 0 #index of current question
 question = None
-answers = []
+answers = {}
 
 #New Main Page
 class MainHandler(webapp2.RequestHandler):
@@ -45,15 +46,17 @@ class MainHandler(webapp2.RequestHandler):
         if CURRENT < TOTAL:
           CURRENT += 1
           game_template = the_jinja_env.get_template('templates_new/game.html')
-          question = question_list[randint(0,14)]
+          index = random.randint(0,len(question_list)-1)
+          self.response.write(str(index) + str(len(question_list)))
+          question = question_list[index]
           question_list.remove(question)
 
           template_dict = {
-            "question": question.question,
-            "choice1": question.choice1,
-            "choice2": question.choice2,
-            "choice3": question.choice3,
-            "choice4": question.choice4
+             "question": question.question,
+             "choice1": question.choice1,
+             "choice2": question.choice2,
+             "choice3": question.choice3,
+             "choice4": question.choice4
           }
 
           self.response.write(game_template.render(template_dict))
@@ -64,7 +67,7 @@ class MainHandler(webapp2.RequestHandler):
           CURRENT = 0
 
           for i in answers:
-            if i == 'correct':
+            if answers[i] == 'correct':
               count += 1
 
           template_dict["correct"] = count
@@ -95,9 +98,9 @@ class ScoreHandler(webapp2.RequestHandler):
       if i:
         template_dict['choice'] = i
         if i == question.correct_answer:
-          answers.append('correct')
+          answers[CURRENT] = 'correct'
         else:
-          answers.append('incorrect')
+          answers[CURRENT] = 'incorrect'
         break
 
 
