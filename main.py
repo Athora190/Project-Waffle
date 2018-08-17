@@ -34,6 +34,7 @@ TOTAL = 15 #number of questions to ask
 CURRENT = 0 #index of current question
 question = None
 answers = {}
+DATA_LOADED = False
 
 #New Main Page
 class MainHandler(webapp2.RequestHandler):
@@ -42,12 +43,19 @@ class MainHandler(webapp2.RequestHandler):
         global TOTAL
         global question
         global question_list
+        global DATA_LOADED
+
+        while DATA_LOADED == False:
+            seed_data()
+            question_list = Questions.query().fetch()
+            if len(question_list) > 0:
+                DATA_LOADED = True
 
         if CURRENT < TOTAL:
           CURRENT += 1
           game_template = the_jinja_env.get_template('templates_new/game.html')
           index = random.randint(0,len(question_list)-1)
-          self.response.write(str(index) + str(len(question_list)))
+          #self.response.write(str(question_list) + str(len(question_list)))
           question = question_list[index]
           question_list.remove(question)
 
