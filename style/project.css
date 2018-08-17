@@ -141,7 +141,7 @@ box 1.
 */
 .botn1 {
   color: black;
-  background-color: #008fb3;
+  background-color: #236982;
   border: none;
   font-family: Helvetica;
   font-size: 1.6rem;
@@ -156,7 +156,7 @@ box 1.
 #green {
   margin: auto;
 	border: none;
-  background-color: #008fb3;
+  background-color: #236982;
 	height: 100px;
 
 
@@ -166,9 +166,10 @@ box 1.
 
 
 #blue {
+
   margin: auto;
 	border: none;
-  background-color: #008fb3;
+  background-color: #236982;
 	height: 100px;
 
 
