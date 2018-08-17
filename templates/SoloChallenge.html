@@ -10,19 +10,57 @@ body {
 				color: white;
 	}
 
+.Starting{
+	margin-top: 100px;
+	display:flex;
+  align-items: center;
+  justify-content: center;
+}
+#h21 {
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+h2{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+#ready {
+	margin-top: 300px;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+#red{
+	color: #3B92BF;
+  background-color: #161355;
+  border: none;
+  font-family: Helvetica;
+  font-size: 1.7rem;
+	font-weight: 100;
+  height: 100px;
+  width: 350px;
+
+}
+
 </style>
 
 
 <body>
 
-
+<div class="Starting">
 <h1> This is the Solo Challenge </h1>
-
-<p> The goal of the solo challenge is to get as many qusetions correctly as possible. Depending on how many you get correct is yor score compared to everone else who tries the solo chalenge. There are ten questions with five bonus questions there is no time limit,  Good Luck  </p>
-<h1 id= ready> Ready?</h1>
-<form method="post" action = "/game">
-	<button class="botn" id="red">Ready</button>
+</div>
+<h2 id='h21'> The goal of the solo challenge is to get as many qusetions correctly as possible.</h2> <h2 id='h22'>Depending on how many you get correct is yor score compared to everone else who tries the solo chalenge.</h2>
+<h2> There are ten questions with five bonus questions there is no time limit,  Good Luck
+</h2>
+<h1 id= 'ready'> Are You Ready?</h1>
+<center>
+<a href='/game'>
+	<button id='red'>Ready</button>
 </a>
-</form>
+</center>
+
 </body>
 </html>

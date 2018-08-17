@@ -45,7 +45,7 @@ class MainHandler(webapp2.RequestHandler):
         if CURRENT < TOTAL:
           CURRENT += 1
           game_template = the_jinja_env.get_template('templates_new/game.html')
-          question = question_list[randint(0,len(question_list)-1)]
+          question = question_list[randint(0,14)]
           question_list.remove(question)
 
           template_dict = {
@@ -69,8 +69,9 @@ class MainHandler(webapp2.RequestHandler):
 
           template_dict["correct"] = count
           if count >= 7:
-            template_dict["level"] ="Congratulations you do have what it takes!"
-
+              template_dict["level"] ="Congratulations you do have what it takes!"
+          else:
+              template_dict['level'] = "Sorry, Try again if you dare"
           self.response.write(game_template.render(template_dict))
     def post(self):
         self.get()
