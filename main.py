@@ -19,6 +19,7 @@ from questions_model import Questions
 from questions import seed_data
 from random import shuffle
 import random
+import logging
 
 # Import in main.py
 
@@ -44,6 +45,8 @@ class MainHandler(webapp2.RequestHandler):
         global question
         global question_list
         global DATA_LOADED
+        
+        logging.info(answers)
 
         while DATA_LOADED == False:
             seed_data()
@@ -124,6 +127,8 @@ class QuestionHandler(webapp2.RequestHandler):
 
 class MainPage(webapp2.RequestHandler):
     def get(self):
+        global answers
+        answers={}
         welcome_template = the_jinja_env.get_template('templates/project.html')
         self.response.write(welcome_template.render())
 
@@ -131,6 +136,8 @@ class SoloHandler(webapp2.RequestHandler):
     def get(self):
         self.post()
     def post(self):
+    	# answers = {}
+    	logging.info(answers)
         welcome_template = the_jinja_env.get_template('templates/SoloChallenge.html')
         self.response.write(welcome_template.render())
 
