@@ -30,7 +30,7 @@ the_jinja_env = jinja2.Environment(
     autoescape=True)
 
 question_list = Questions.query().fetch()
-TOTAL = 15 #number of questions to ask
+TOTAL = 5 #number of questions to ask
 CURRENT = 0 #index of current question
 question = None
 answers = {}

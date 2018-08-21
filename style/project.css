@@ -18,7 +18,7 @@
  /* grid-auto-rows: auto auto; */
 	width: 100%;
   grid-template-columns: auto;
-	justify-content: center;
+  justify-content: center;
   grid-row-gap: 20px;
   align-content: center;
   align-items: center;

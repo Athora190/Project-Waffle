@@ -6,7 +6,24 @@
         body{
           background: url('images/maxresdefault (1).jpg');
           background-repeat: no-repeat;
-          background-size: 100% 450%;
+          background-size: 100% 250%;
+        }
+        .container{
+        	margin-top:100px;
+        	display:flex;
+        align-items: center;
+        justify-content: center;
+        	
+        }
+        button{
+        	background-color:#890000;
+        	height:100px;
+        	width:300px;
+        	border:none;
+        	font-family: Helvetica;
+        	font-weight: 100;
+        	font-size:1.6rem;
+        	
         }
         h1{
           margin-top: 150px;
@@ -31,5 +48,9 @@
     <body>
         <h1> {{level}}</h1>
         <h2>You got {{correct}} out of {{total}}</h2>
+        <div class='container'><button>
+        <a>Back to start</a>
+        </button>
+        </div>
     </body>
 </html>
